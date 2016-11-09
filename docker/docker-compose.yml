@@ -1,0 +1,27 @@
+redis:
+  build: ./redis
+
+io-all:
+  build: ./io-all
+  links:
+    - redis:redis-server
+
+ck-puck:
+  build: ./ck-puck
+  ports:
+    - 8080:8080
+  links:
+    - redis:redis-server
+    - io-all:ioall-server
+    
+ck-puck-front:
+  build: ./ck-puck-front
+    
+nginx:
+  build: ./nginx
+  ports: 
+    - 80:80
+  volumes_from:
+    - ck-puck-front
+  links:
+    - ck-puck:puck-server  
