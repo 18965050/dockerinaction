@@ -12,6 +12,6 @@
 2. 在hosts文件中配置`<docker虚拟机的IP>	 dd.xyz.cn`
 3. 修改`release.sh`脚本中的`IO_HOME`,`CK_PUCK_HOME`,`CK_PUCK_FRONT_HOME`变量为本机对应的项目路径
 2. 在Docker Toolbox中运行`release.sh`进行各项目的编译, 打包, 并启动docker container运行 
-3. 浏览器访问`http:/./dd.xyz.cn`
+3. 浏览器访问`http://dd.xyz.cn`
 
 **注: 如果docker-redis或docker-ck-puck启动不了, 注销对应Dockfile中的USER指令**
