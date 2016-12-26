@@ -3,7 +3,10 @@
 2. 安装 [Docker Toolbox](https://github.com/docker/toolbox/releases/download/v1.12.2/DockerToolbox-1.12.2.exe "Toolbox"), 并修改启动目标为`${GIT_HOME}\bin\bash.exe`启动
 3. (可选) 为方便docker管理,可安装Eclipse的Docker插件. 此插件可方便的对docker的image, container进行管理
 4. 本机(windows)hosts文件中添加配置:
-	`192.168.28.63    docker.vemic.com`
+	```
+	192.168.28.63    docker.vemic.com		#此为公司docker harbor地址
+	```
+
 	并修改default docker VM配置文件config.json,添加`InsecureRegistry`配置项内容`"docker.vemic.com"`
 	
 
